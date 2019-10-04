@@ -1,0 +1,13 @@
+<form [formGroup]="registerForm" (ngSubmit)="submitReg()">
+  <h3 class="form-name">Register</h3>
+  <label><i class="fa fa-user" aria-hidden="true"></i>
+    <input type="text" formControlName="login" placeholder="Username" required>
+  </label>
+  <label><i class="fas fa-envelope" aria-hidden="true"></i>
+  <input type="text" formControlName="email" placeholder="Email">
+  </label>
+  <label> <i class="fa fa-lock" aria-hidden="true"></i> 
+    <input type="text" formControlName="password" placeholder="Password" required>
+  </label>
+  <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+</form>          

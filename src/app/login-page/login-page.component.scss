@@ -1,0 +1,48 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color:lightgrey;
+    background-image: url(/assets/img/log-bgr.jpg);
+    background-size: 100vw 100vh;
+    main{
+        width: 35vw;
+        text-align: center;
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: 40px;
+            font-family: 'Monoton', cursive;
+            word-spacing: 20px;
+            text-shadow: 1px 1px rgba(0, 0, 0, 1);
+            color: #b9a85e;
+        }
+        h3{
+            font-family: 'Josefin Slab', serif;
+            text-shadow: 1px 1px rgba(0, 0, 0, 1);
+            color: #e1ddb8;
+            margin: 20px;
+            width: 100%;
+        }
+        button {
+            width: 170px;
+            height: 40px;
+            font-size: 15px;
+            margin: 20px;
+            border: 2px solid rgb(56, 49, 49);
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+            font-family: 'Great Vibes', cursive;
+            outline: none;
+            box-shadow: 1px 1px rgba(0, 0, 0, 1);
+        }
+        button:hover{
+            cursor: pointer;
+            background: linear-gradient(to top, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+        }
+   }
+}

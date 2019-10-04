@@ -1,0 +1,19 @@
+<main>
+    <div class="options-menu" *ngIf="menu">
+      <h2>Choose option:</h2>
+      <button (click)="getBalance()">Balance</button>
+    </div>
+    <div class="balance" *ngIf="balance">
+      <label class="w-20">
+          <span>Please, choose currency: </span>
+          <select [(ngModel)]="currencyId">
+              <option *ngFor="let currency of mainService.currencies">{{currency.value}}</option>
+          </select>
+      </label>
+      <button (click)="calculation()">Calculate</button>
+      <h3 *ngIf="information">Your balance is {{totVal}} {{currencyId}}</h3>
+      <p href="#" (click)="getDetails()" *ngIf="!detailInf">Details</p>
+      <h3 *ngIf="detailInf">Card: {{card}} {{currencyId}}; Cash: {{cash}} {{currencyId}}</h3>
+      <button (click)="goHome()">Exit</button>
+    </div>
+  </main>

@@ -1,0 +1,73 @@
+<main *ngIf="showMainForm">
+  <div *ngIf="menu">
+  <h2>Income list</h2>
+  <p *ngIf="!user.income.length">The list is empty.</p>
+  <div class="navigation" *ngIf="user.income.length">
+    <label><span>Sort:</span>
+    <select [(ngModel)]="val" (ngModelChange) = "onChange($event)">
+      <option value="date" (choose)='sort()'>date</option>
+      <option value="value">value</option>
+      <option value="currency">currency</option>
+      <option value="source">source</option>
+      <option value="card">card</option>
+    </select>
+    <span (click)="down = !down"><i class="far fa-arrow-alt-circle-down" *ngIf="down"></i><i class="far fa-arrow-alt-circle-up" *ngIf="!down"></i></span>
+    </label>
+  </div>
+  <table *ngIf="user.income.length">
+  <tr> 
+    <th>Date</th>
+    <th>Value</th>
+    <th>Currency</th>
+    <th>Source</th>
+    <th>Card</th>
+  </tr>
+  <tr *ngFor='let income of user.income'> 
+    <td>{{income.date}}</td>
+    <td>{{income.value}}</td>
+    <td>{{income.currency}}</td>
+    <td>{{income.source}}</td>
+    <td>{{income.card}}</td>
+  </tr>
+  </table>
+  <button (click)="addIncome()">Add income</button>
+  </div>
+  <form class="income" *ngIf="income" [formGroup]="incomeForm" (ngSubmit)="addNewIncome()">
+      <h2>Add new income:</h2>
+      <label class="w-40">
+        <span>Income date:</span>
+        <input type="date" formControlName="date">
+      </label>
+      <label class="w-20">
+          <span>Value:</span>
+          <input type="text" formControlName="value"  placeholder="Add amount..."> 
+      </label>
+      <label class="w-20">
+          <span>Currency:</span>
+          <select formControlName="currency">
+              <option value="UAH">UAH</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="PLN">PLN</option>
+          </select>
+      </label>
+      <label class="w-70">
+          <span>Source:</span>
+          <select class="w-90" formControlName="source">
+              <option>Salary</option>
+              <option>Business/Profession</option>
+              <option>Capital gain</option>
+              <option>Interest from savings account</option>
+              <option>House Property</option>
+              <option>Gifts</option>
+              <option>Other sources</option>
+          </select>
+      </label>
+      <label class="w-20">
+          <span>Card:</span>
+          <input type="checkbox" formControlName="card">
+      </label>
+    <button type="submit" [disabled]="!incomeForm.valid">Add</button>
+    <button (click)="goHome()">Exit</button>
+    </form>
+</main>

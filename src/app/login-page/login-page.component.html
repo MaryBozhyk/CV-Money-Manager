@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <header>
+    </header>
+    <main>
+        <h1>Wellcome to money manager</h1>
+        <h3>Please, login or register</h3>
+        <div class="button-field">
+            <button type="button" (click)="showLogForm = true; showRegForm = false">Login</button>
+            <button type="button" (click)="showRegForm = true; showLogForm = false">Register</button>
+        </div>
+        <app-login-form *ngIf="showLogForm"></app-login-form>
+        <app-register-form *ngIf="showRegForm"></app-register-form>
+    </main>
+</div>

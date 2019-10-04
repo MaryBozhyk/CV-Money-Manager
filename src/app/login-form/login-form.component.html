@@ -1,0 +1,10 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <h3 class="form-name">Login</h3>
+  <label><i class="fa fa-user" aria-hidden="true"></i>
+      <input type="text" formControlName="login" placeholder="Username" required>
+  </label>
+  <label> <i class="fa fa-lock" aria-hidden="true"></i> 
+      <input type="text" formControlName="password" placeholder="Password" required>
+  </label>
+  <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+</form>

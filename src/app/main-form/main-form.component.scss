@@ -1,0 +1,73 @@
+main{
+    width: 70%;
+    min-height: 400px;
+    margin: 10vh 15vw;
+    background: radial-gradient(ellipse at center, rgba(216,208,239,0.95) 0%, rgba(55,59,58,0.95) 100%);
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 1px 1px  rgba(44,44,51,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .options-menu{
+        width: 60%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        h2{
+            width: 100%;
+            text-align: center;
+            margin: 10px;
+            font-size: 30px;
+            font-family: 'Abril Fatface', cursive;
+            color: #866d2e;
+            text-shadow: 1px 1px rgba(0, 0, 0, 1);                 
+        }
+        button {
+            width: 170px;
+            height: 40px;
+            font-size: 15px;
+            margin: 20px;
+            border: 2px solid rgb(56, 49, 49);
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+            font-family: 'Great Vibes', cursive;
+            outline: none;
+            box-shadow: 1px 1px rgba(0, 0, 0, 1);
+        }
+        button:hover{
+            cursor: pointer;
+            background: linear-gradient(to top, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+        }
+    }
+    div{
+        width: 60%;
+        button {
+            width: 120px;
+            height: 35px;
+            font-size: 15px;
+            margin: 10px 100px;
+            border: 2px solid rgb(56, 49, 49);
+            border-radius: 5px;
+            background: linear-gradient(to bottom, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+            font-family: 'Great Vibes', cursive;
+            outline: none;
+            box-shadow: 1px 1px rgba(0, 0, 0, 1);
+        }
+        button:hover{
+            cursor: pointer;
+            background: linear-gradient(to top, #e6e3b8 0%, #9c7d38 51%, #3a3621 99%, #79734c 100%);
+        }
+        h3{
+            width: 100%;
+        }
+        p{
+            width: 100%;
+            cursor: pointer;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+}
